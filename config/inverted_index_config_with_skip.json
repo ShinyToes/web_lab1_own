@@ -26,10 +26,24 @@
   },
   "skip_pointer": {
     "enabled": true,
-    "skip_strategy": "sqrt",
+    "skip_strategy": "fixed",
+    "skip_step": 10,
     "skip_marker_binary": 4294967295,
     "skip_marker_compressed": 253,
-    "min_list_length": 3
+    "min_list_length": 3,
+  
+
+
+"_comment": {
+      "skip_strategy": "可选值: 'sqrt'(√L,默认), 'log'(log2(L)), 'linear'(L/10), 'cbrt'(∛L), 'fixed'(使用skip_step固定值)",
+      "skip_step": "当skip_strategy='fixed'时使用，指定固定步长值（整数），null表示使用策略计算",
+      "示例": {
+        "sqrt": "skip_strategy='sqrt', skip_step=null",
+        "log": "skip_strategy='log', skip_step=null",
+        "fixed_10": "skip_strategy='fixed', skip_step=10",
+        "linear": "skip_strategy='linear', skip_step=null"
+      }
+    }
   }
 }
 
