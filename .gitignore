@@ -1,0 +1,60 @@
+/All_Unpack
+/output
+/output_inverted_index
+/output_retrieval
+/output_inverted_index_skiplist
+/output_inverted_index_pos
+/output_phrase_search
+/part_1
+/part_2
+/part_3
+/part_4
+/cache
+
+# 忽略 Python 缓存文件
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 忽略虚拟环境
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# 忽略 IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 忽略系统文件
+.DS_Store
+Thumbs.db
+
+# 忽略日志文件
+*.log
+
+# 忽略临时文件
+*.tmp
+*.temp

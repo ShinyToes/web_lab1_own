@@ -1,0 +1,35 @@
+{
+  "input_dir": "output/normalized_events",
+  "output_dir": "output_inverted_index_skiplist",
+  "files": {
+    "inverted_index": "inverted_index.txt",
+    "inverted_index_bin": "inverted_index.bin",
+    "inverted_index_bin_with_skip": "inverted_index_skiplist.bin",
+    "inverted_index_compressed_with_skip": "inverted_index_compressed_skiplist.bin",
+    "dictionary": "dictionary.txt",
+    "dictionary_bin": "dictionary.bin"
+  },
+  "storage": {
+    "term_max_length": 20,
+    "doc_freq_size": 4,
+    "pointer_size": 4,
+    "doc_id_bits": 28,
+    "doc_id_size": 4
+  },
+  "compression": {
+    "k_interval": 4,
+    "term_bytes": 8,
+    "freq_bytes": 4,
+    "ptr_bytes": 4,
+    "term_ptr_bytes": 3,
+    "term_len_bytes": 1
+  },
+  "skip_pointer": {
+    "enabled": true,
+    "skip_strategy": "sqrt",
+    "skip_marker_binary": 4294967295,
+    "skip_marker_compressed": 253,
+    "min_list_length": 3
+  }
+}
+

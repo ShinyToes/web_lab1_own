@@ -1,0 +1,31 @@
+{
+  "inverted_index_dir": "output_inverted_index",
+  "documents_dir": "output/normalized_events",
+  "output_dir": "output_retrieval",
+  "tfidf_method": "standard",
+  "top_k": 10,
+  "min_similarity": 0.0,
+  "test_queries": [
+    "music",
+    "food",
+    "art",
+    "technology innovation",
+    "education",
+    "health",
+    "business entrepreneurship",
+    "travel adventure",
+    "science research discovery",
+    "culture tradition heritage"
+  ],
+  "display_options": {
+    "show_details": true,
+    "show_matched_terms": true,
+    "show_doc_length": true
+  },
+  "output_options": {
+    "save_json": true,
+    "save_txt": true,
+    "generate_report": true,
+    "save_statistics": true
+  }
+}

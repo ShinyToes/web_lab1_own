@@ -1,0 +1,29 @@
+{
+    "input": {
+        "xml_dir": "All_Unpack",
+        "max_files": 10000
+    },
+    "output": {
+        "base_dir": "output",
+        "past_events_dir": "past_events",
+        "tokenized_events_dir": "tokenized_events",
+        "normalized_events_dir": "normalized_events"
+    },
+    "tokenization": {
+        "use_mwe": true,
+        "phrase_dict_file": "mwe_phrases.txt"
+    },
+    "normalization": {
+        "remove_stopwords": true,
+        "remove_numbers": true,
+        "remove_punctuation": true,
+        "remove_short_words": true,
+        "min_word_length": 2,
+        "use_lemmatization": true,
+        "use_stemming": false
+    },
+    "processing": {
+        "use_multithread": true,
+        "max_workers":  30
+    }
+}

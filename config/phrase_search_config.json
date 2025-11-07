@@ -1,0 +1,18 @@
+{
+  "input": {
+    "dictionary_bin": "output_inverted_index_pos/dictionary.bin",
+    "inverted_index_bin": "output_inverted_index_pos/inverted_index.bin"
+  },
+  "output": {
+    "output_dir": "output_phrase_search",
+    "results_file": "phrase_search_results.txt"
+  },
+  "storage": {
+    "term_max_length": 20,
+    "doc_freq_size": 4,
+    "pointer_size": 4,
+    "doc_id_size": 4,
+    "position_size": 2
+  }
+}
+
