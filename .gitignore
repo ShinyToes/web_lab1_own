@@ -10,10 +10,8 @@ venv/
 dist/
 build/
 
-# 输出目录
-output/
-output_inverted_index/
-output_inverted_index_skiplist/
+# 输出目录（排除所有output开头的目录）
+output*/
 
 # IDE
 .vscode/
