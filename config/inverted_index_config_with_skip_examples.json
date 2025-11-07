@@ -1,0 +1,79 @@
+{
+  "_comment": "跳表指针步长配置示例文件",
+  "_说明": "复制此文件中的skip_pointer配置到inverted_index_config_with_skip.json中",
+  
+  "example_1_sqrt": {
+    "skip_pointer": {
+      "enabled": true,
+      "skip_strategy": "sqrt",
+      "skip_step": null,
+      "min_list_length": 3,
+      "_说明": "平方根策略：步长=√L，默认策略，最优平衡"
+    }
+  },
+  
+  "example_2_log": {
+    "skip_pointer": {
+      "enabled": true,
+      "skip_strategy": "log",
+      "skip_step": null,
+      "min_list_length": 3,
+      "_说明": "对数策略：步长=log2(L)，更密集的指针，适合频繁查询"
+    }
+  },
+  
+  "example_3_fixed": {
+    "skip_pointer": {
+      "enabled": true,
+      "skip_strategy": "fixed",
+      "skip_step": 10,
+      "min_list_length": 3,
+      "_说明": "固定步长：所有列表使用固定步长10，简单但可能不够优化"
+    }
+  },
+  
+  "example_4_linear": {
+    "skip_pointer": {
+      "enabled": true,
+      "skip_strategy": "linear",
+      "skip_step": null,
+      "min_list_length": 3,
+      "_说明": "线性策略：步长=L/10，指针数量固定比例"
+    }
+  },
+  
+  "example_5_cbrt": {
+    "skip_pointer": {
+      "enabled": true,
+      "skip_strategy": "cbrt",
+      "skip_step": null,
+      "min_list_length": 3,
+      "_说明": "立方根策略：步长=∛L，更稀疏的指针，节省空间"
+    }
+  },
+  
+  "_步长策略对比": {
+    "列表长度100": {
+      "sqrt": "步长=10，指针数≈10",
+      "log": "步长=6，指针数≈16",
+      "linear": "步长=10，指针数≈10",
+      "cbrt": "步长=4，指针数≈25",
+      "fixed(10)": "步长=10，指针数≈10"
+    },
+    "列表长度1000": {
+      "sqrt": "步长=31，指针数≈32",
+      "log": "步长=9，指针数≈111",
+      "linear": "步长=100，指针数≈10",
+      "cbrt": "步长=10，指针数≈100",
+      "fixed(10)": "步长=10，指针数≈100"
+    },
+    "列表长度10000": {
+      "sqrt": "步长=100，指针数≈100",
+      "log": "步长=13，指针数≈769",
+      "linear": "步长=1000，指针数≈10",
+      "cbrt": "步长=21，指针数≈476",
+      "fixed(10)": "步长=10，指针数≈1000"
+    }
+  }
+}
+

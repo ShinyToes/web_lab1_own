@@ -1,0 +1,25 @@
+{
+  "input_dir": "./output/normalized_events",
+  "output_dir": "./output_inverted_index",
+  "files": {
+    "inverted_index": "inverted_index.txt",
+    "inverted_index_bin": "inverted_index.bin",
+    "dictionary": "dictionary.txt",
+    "dictionary_bin": "dictionary.bin"
+  },
+  "storage": {
+    "term_max_length": 20,
+    "doc_freq_size": 4,
+    "pointer_size": 4,
+    "doc_id_bits": 28,
+    "doc_id_size": 4
+  },
+  "compression": {
+    "k_interval": 4,
+    "term_bytes": 8,
+    "freq_bytes": 4,
+    "ptr_bytes": 4,
+    "term_ptr_bytes": 3,
+    "term_len_bytes": 1
+  }
+}

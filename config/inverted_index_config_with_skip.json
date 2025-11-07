@@ -1,0 +1,50 @@
+{
+  "input_dir": "output/normalized_events",
+  "output_dir": "output_inverted_index_skiplist",
+  "files": {
+    "inverted_index": "inverted_index.txt",
+    "inverted_index_bin": "inverted_index.bin",
+    "inverted_index_bin_with_skip": "inverted_index_skiplist.bin",
+    "inverted_index_compressed_with_skip": "inverted_index_compressed_skiplist.bin",
+    "dictionary": "dictionary.txt",
+    "dictionary_bin": "dictionary.bin"
+  },
+  "storage": {
+    "term_max_length": 20,
+    "doc_freq_size": 4,
+    "pointer_size": 4,
+    "doc_id_bits": 28,
+    "doc_id_size": 4
+  },
+  "compression": {
+    "k_interval": 4,
+    "term_bytes": 8,
+    "freq_bytes": 4,
+    "ptr_bytes": 4,
+    "term_ptr_bytes": 3,
+    "term_len_bytes": 1
+  },
+  "skip_pointer": {
+    "enabled": true,
+    "skip_strategy": "fixed",
+    "skip_step": 10,
+    "skip_marker_binary": 4294967295,
+    "skip_marker_compressed": 253,
+    "min_list_length": 3,
+
+
+
+
+    "_comment": {
+      "skip_strategy": "可选值: 'sqrt'(√L,默认), 'log'(log2(L)), 'linear'(L/10), 'cbrt'(∛L), 'fixed'(使用skip_step固定值)",
+      "skip_step": "当skip_strategy='fixed'时使用，指定固定步长值（整数），null表示使用策略计算",
+      "示例": {
+        "sqrt": "skip_strategy='sqrt', skip_step=null",
+        "log": "skip_strategy='log', skip_step=null",
+        "fixed_10": "skip_strategy='fixed', skip_step=10",
+        "linear": "skip_strategy='linear', skip_step=null"
+      }
+    }
+  }
+}
+
